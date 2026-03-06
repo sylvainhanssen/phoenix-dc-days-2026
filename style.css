@@ -89,3 +89,10 @@ summary { cursor: pointer; font-weight: 600; }
   .quick-info { grid-template-columns: 1fr; }
   .agenda-table .row { grid-template-columns: 110px 1fr 180px; }
 }
+
+/* Let agenda grid cells shrink and wrap when needed */
+.agenda-table .row > div {
+  min-width: 0;             /* critical to prevent overflow */
+  overflow-wrap: anywhere;  /* break long tokens (names, words) */
+  word-break: normal;       /* keep normal word breaking otherwise */
+}
