@@ -118,3 +118,11 @@ summary { cursor: pointer; font-weight: 600; }
     font-weight: 600;
   }
 }
+
+  /* ✅ Add label only on normal rows, NOT the header row */
+  .agenda-table .row:not(.head) > div:nth-child(3):not(:empty)::before {
+    content: "Speakers: ";
+    font-weight: 600;
+  }
+}
+
